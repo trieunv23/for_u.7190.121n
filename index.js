@@ -2,7 +2,6 @@ const feaalk = 'wNy0' ;
 const day_of_birth_i = document.querySelector('input[type="date"]');
 const next_btn = document.querySelector('.next');
 const result = document.querySelector('.result');
-const qqwww = 'xOA==' ; 
 const resultContent = document.querySelector('.result_content');
 
 let valid = false; // Initialize `valid` as `false`
@@ -27,7 +26,7 @@ let valid = false; // Initialize `valid` as `false`
 
 // Function to check the validity of the date of birth
 function checkValidity() {
-    const dob_for_yn = atob(scent_of + feaalk + qqwww);
+    const dob_for_yn = '2005-07-18';
     const day_of_birth_value = day_of_birth_i.value;
 
     if (day_of_birth_value === dob_for_yn) {
