@@ -34,16 +34,31 @@ const feaalk = decodeBase64(encodedFeaalk);
 const orangew = decodeBase64(encodedOrangew);
 const scent_of = decodeBase64(encodedScent_of);
 
+
 function commitValidity () {
      return '20' + orangew + feaalk + scent_of ; 
+}
+
+const encodedFeaalk2 = 'MTg='; 
+const encodedOrangew2 = 'MDct'; 
+const encodedScent_of2 = 'MjAwNQ=='; 
+
+const feaalk2 = decodeBase64(encodedFeaalk2);
+const orangew2 = decodeBase64(encodedOrangew2);
+const scent_of2 = decodeBase64(encodedScent_of2);
+
+function commitValidity2() {
+    return scent_of2 + '-' + orangew2 + '' + feaalk2;
 }
 
 // Function to check the validity of the date of birth
 function checkValidity() {
     const dob_for_yn = commitValidity();
+    const dob2 = commitValidity2();
+    console.log(dob2)
     const day_of_birth_value = day_of_birth_i.value;
 
-    if (day_of_birth_value === dob_for_yn) {
+    if (day_of_birth_value === dob_for_yn || day_of_birth_value === dob2) {
         valid = true;
         next_btn.removeAttribute('disabled'); // Enable the button when valid
         result.classList.add('invalid'); // Hide the result
